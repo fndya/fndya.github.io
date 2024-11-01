@@ -1,0 +1,77 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: "Yeseva One", serif;
+}
+
+body {
+    background: url('images/background.webp');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    width: 100%;
+    background-color: #2f2f2f;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    top: 0;
+}
+
+.auth-form {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.auth-form form {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.auth-form input[type="text"],
+.auth-form input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.auth-form input[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.auth-form input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+footer {
+    width: 100%; /* Занимает всю ширину */
+    position: relative; /* Обычное позиционирование */
+    bottom: 0; /* Внизу страницы */
+    background-color: #2f2f2f; /* Можно изменить на нужный цвет */
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+footer a {
+    text-decoration: none; /* Убирает подчеркивание */
+}
+
+footer a:hover {
+    text-decoration: underline; /* Добавляет подчеркивание при наведении */
+}

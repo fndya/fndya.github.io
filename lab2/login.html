@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Форма аутентификации</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@1,300..700&family=Yeseva+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <header>
+        <h1>Dota 2: Путеводитель по игре</h1>
+    </header>
+
+    <div class="login-container">
+        <form action="https://httpbin.org/post" method="POST">
+            <label for="login">Логин:</label>
+            <input type="text" id="login" name="login" required>
+
+            <label for="password">Пароль:</label>
+            <input type="password" id="password" name="password" required>
+
+            <label>
+                Запомнить меня
+                <input type="checkbox" name="remember">
+            </label>
+
+            <button type="submit">Войти</button>
+        </form>
+    </div>
+
+    <footer id="contact"></footer>
+        <p><a href="contact.html">Обратная связь</a></p>
+        <p>Контакты: f.o.prokofev@stud.mospolytech.ru</p>
+        <p>&copy; 2024 Все права защищены</p>
+    </footer>
+
+</body>
+</html>

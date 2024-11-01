@@ -1,0 +1,103 @@
+/* Подключаем шрифт и применяем к телу страницы */
+body {
+    font-family: "Yeseva One", serif;
+    margin: 0;
+    padding: 0;
+    line-height: normal;
+    background-color: #f4f4f4;
+}
+
+/* Стили для шапки */
+header {
+    background-color: #492126;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+/* Стили для навигационного меню */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Основной контент */
+main {
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+/* Галерея */
+.gallery img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.gallery p {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+/* Стили для таблицы */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 40px;
+}
+
+table th, table td {
+    border: 1px solid #333030;
+    padding: 10px;
+    text-align: center;
+}
+
+table th {
+    background-color: #eaeaea;
+    font-weight: bold;
+}
+
+/* Футер */
+footer {
+    background-color: #492126;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    bottom: 0;
+    width: 100%;
+}
+
+footer a {
+    color: inherit; /* Устанавливает цвет ссылки такой же, как у текста в футере */
+    text-decoration: none; /* Убирает подчеркивание */
+}
+
+footer a:hover {
+    text-decoration: underline; /* Добавляет подчеркивание при наведении */
+}
+
+
