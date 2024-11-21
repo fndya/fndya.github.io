@@ -14,12 +14,30 @@ body {
 }
 
 header {
+    background-color: #492126;
+    color: white;
+    padding: 20px;
     text-align: center;
-    color: #fff;
-    background-color: rgba(0, 0, 0, 0.8);
-    padding: 20px 0;
-    font-family: 'Yeseva One', serif;
-    font-size: 2rem;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
 }
 
 /* Стили для формы */
