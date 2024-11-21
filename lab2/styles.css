@@ -1,13 +1,13 @@
-/* Подключаем шрифт и применяем к телу страницы */
-body {
+
+html, body {
     font-family: "Yeseva One", serif;
     margin: 0;
     padding: 0;
+    height: 100%;
     line-height: normal;
     background-color: #f4f4f4;
 }
 
-/* Стили для шапки */
 header {
     background-color: #492126;
     color: white;
@@ -19,7 +19,6 @@ header h1 {
     margin: 0;
 }
 
-/* Стили для навигационного меню */
 nav ul {
     list-style-type: none;
     padding: 0;
@@ -47,6 +46,7 @@ main {
 
 section {
     margin-bottom: 40px;
+    flex: 1;
 }
 
 /* Галерея */

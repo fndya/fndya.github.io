@@ -6,7 +6,7 @@ html, body {
 }
 
 body {
-    background: url('images/background.webp');
+    background: url('/lab1/images/background.webp');
     background-size: cover;
     background-position: center;
     display: flex;
@@ -14,61 +14,75 @@ body {
 }
 
 header {
-    width: 100%;
-    background-color: #2f2f2f;
-    color: white;
-    padding: 20px;
     text-align: center;
-    position: relative;
-    top: 0;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 20px 0;
+    font-family: 'Yeseva One', serif;
+    font-size: 2rem;
 }
 
-.auth-form {
-    background-color: rgba(255, 255, 255, 0.8);
-    padding: 40px;
+/* Стили для формы */
+.login-container {
+    background-color: rgba(255, 255, 255, 0.9);
+    max-width: 400px;
+    margin: auto;
+    margin-top: 50px;
+    padding: 20px 30px;
     border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.auth-form form {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
+form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
 }
 
-.auth-form input[type="text"],
-.auth-form input[type="password"] {
+form input[type="text"],
+form input[type="password"] {
     width: 100%;
     padding: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    box-sizing: border-box;
 }
 
-.auth-form input[type="submit"] {
-    background-color: #007bff;
-    color: white;
-    padding: 10px;
+form input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+/* Стили для кнопки */
+form button {
+    display: block;
+    width: 100%;
+    background-color: #28a745; /* Зеленый цвет */
+    color: #fff;
     border: none;
+    padding: 10px;
+    font-size: 1.1rem;
     border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-.auth-form input[type="submit"]:hover {
-    background-color: #0056b3;
+form button:hover {
+    background-color: #218838; /* Темно-зеленый при наведении */
 }
 
+/* Стили для футера */
 footer {
-    width: 100%; /* Занимает всю ширину */
-    position: relative; /* Обычное позиционирование */
-    bottom: 0; /* Внизу страницы */
-    background-color: #2f2f2f; /* Можно изменить на нужный цвет */
+    background-color: #492126;
     color: white;
-    padding: 20px;
     text-align: center;
+    padding: 10px 0;
+    bottom: 0;
+    width: 100%;
 }
 
 footer a {
+    color: inherit; /* Устанавливает цвет ссылки такой же, как у текста в футере */
     text-decoration: none; /* Убирает подчеркивание */
 }
 
