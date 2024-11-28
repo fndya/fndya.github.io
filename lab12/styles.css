@@ -1,0 +1,11 @@
+header {
+    background: linear-gradient(to right, #007bff, #0056b3);
+}
+
+section {
+    padding: 4rem 0;
+}
+
+footer {
+    background: #212529;
+}
