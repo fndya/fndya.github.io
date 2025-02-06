@@ -1,0 +1,88 @@
+/* Контейнер калькулятора */
+.calc-container {
+    width: 300px;
+    margin: 50px auto;
+    background: #f1f1f1;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+/* Экран калькулятора */
+.screen {
+    background: #e63946;
+    color: #fff;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2rem;
+    text-align: right;
+    padding: 20px;
+    box-sizing: border-box;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+/* Контейнер кнопок */
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr) 1fr; /* 3 столбца для цифр, 1 для операций */
+    gap: 10px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Базовый стиль кнопок */
+.key {
+    background: #f1faee;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2rem;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.key:hover {
+    background: #a8dadc;
+    transform: scale(1.05);
+}
+
+.key:active {
+    background: #457b9d;
+    color: #fff;
+}
+
+/* Кнопки операций (+, -, *, /) */
+.operation {
+    background: #e63946;
+    color: #fff;
+}
+
+/* Кнопка равно (=) */
+.result {
+    background: #1d3557;
+    color: #fff;
+    grid-column: span 4; /* Растягиваем кнопку на всю ширину */
+}
+
+/* Кнопка очистки (C) */
+.clear {
+    background: #f4a261;
+    color: #fff;
+    grid-column: span 4; /* Растягиваем кнопку на всю ширину */
+}
+
+/* Отступы для кнопок (цифры и точка) */
+.digit {
+    background: #d8f3dc;
+}
+
+.digit:hover {
+    background: #b7e4c7;
+}

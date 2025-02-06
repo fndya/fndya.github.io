@@ -1,0 +1,52 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+#main_menu, #product_menu {
+    display: flex;
+    padding: 10px;
+    background-color: #f0f0f0;
+}
+#main_menu a, #product_menu a {
+    margin-right: 10px;
+    text-decoration: none;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    color: #000;
+}
+#main_menu a.selected, #product_menu a.selected {
+    background-color: #007bff;
+    color: #fff;
+}
+#content {
+    display: flex;
+}
+#product_menu {
+    flex-basis: 20%;
+    border-right: 1px solid #ddd;
+}
+#multiplication_table {
+    flex-grow: 1;
+    padding: 20px;
+}
+footer {
+    padding: 10px;
+    background-color: #f0f0f0;
+    text-align: center;
+    border-top: 1px solid #ddd;
+}
+.multiplication-table, .multiplication-block {
+    border-collapse: collapse;
+    width: 100%;
+}
+.multiplication-table td, .multiplication-block div {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+}
+.multiplication-block div {
+    display: inline-block;
+    margin: 5px;
+}

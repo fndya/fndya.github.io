@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Функции</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        .form-container {
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid #ddd;
+            background-color: #f9f9f9;
+        }
+        .form-container input {
+            margin: 5px 0;
+            padding: 5px;
+            width: 150px;
+        }
+        .form-container button {
+            margin-top: 10px;
+            padding: 5px 10px;
+        }
+        .result {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Вычисление функций</h1>
+    <h2>Ввод параметров и результаты работы функций</h2>
+
+    <div class="form-container">
+        <h3>Функция возведения в степень (pow(x, n))</h3>
+        <input type="number" id="powX" placeholder="Введите x">
+        <input type="number" id="powN" placeholder="Введите n">
+        <button onclick="calculatePow()">Вычислить</button>
+        <div id="powResult" class="result"></div>
+    </div>
+
+    <div class="form-container">
+        <h3>Функция нахождения НОД (gcd(a, b))</h3>
+        <input type="number" id="gcdA" placeholder="Введите a">
+        <input type="number" id="gcdB" placeholder="Введите b">
+        <button onclick="calculateGCD()">Вычислить</button>
+        <div id="gcdResult" class="result"></div>
+    </div>
+
+    <div class="form-container">
+        <h3>Функция нахождения наименьшей цифры (minDigit(x))</h3>
+        <input type="number" id="minDigitX" placeholder="Введите число x">
+        <button onclick="calculateMinDigit()">Вычислить</button>
+        <div id="minDigitResult" class="result"></div>
+    </div>
+
+    <div class="form-container">
+        <h3>Функция плюрализации (pluralizeRecords(n))</h3>
+        <input type="number" id="pluralizeN" placeholder="Введите n">
+        <button onclick="calculatePluralize()">Вычислить</button>
+        <div id="pluralizeResult" class="result"></div>
+    </div>
+
+    <div class="form-container">
+        <h3>Функция нахождения числа последовательности (Фибоначчи fibb(n))</h3>
+        <input type="number" id="fibonacciN" placeholder="Введите n">
+        <button onclick="calculateFibonacci()">Вычислить</button>
+        <div id="fibonacciResult" class="result"></div>
+    </div>
+
+    <script>
+        
+        function pow(x, n) {
+            if (n === 0) return 1;
+            if (n < 0 || !Number.isInteger(n)) return NaN;
+            let result = 1;
+            for (let i = 0; i < n; i++) {
+                result *= x;
+            }
+            return result;
+        }
+
+        function gcd(a, b) {
+            while (b !== 0) {
+                [a, b] = [b, a % b];
+            }
+            return a;
+        }
+
+        function minDigit(x) {
+            if (x < 0 || !Number.isInteger(x)) return NaN;
+            return Math.min(...x.toString().split('').map(Number));
+        }
+
+        function pluralizeRecords(n) {
+            const lastDigit = n % 10;
+            const lastTwoDigits = n % 100;
+            let word;
+
+            if (lastTwoDigits >= 11 && lastTwoDigits <= 19) {
+                word = "записей";
+            } else if (lastDigit === 1) {
+                word = "запись";
+            } else if (lastDigit >= 2 && lastDigit <= 4) {
+                word = "записи";
+            } else {
+                word = "записей";
+            }
+
+            return `В результате выполнения запроса было найдено ${n} ${word}`;
+        }
+
+        function fibb(n) {
+            if (n < 0 || !Number.isInteger(n)) return NaN;
+            if (n === 0) return 0;
+            if (n === 1) return 1;
+
+            let a = 0, b = 1, temp;
+            for (let i = 2; i <= n; i++) {
+                temp = a + b;
+                a = b;
+                b = temp;
+            }
+            return b;
+        }
+
+        // Обработчики кнопок
+        function calculatePow() {
+            const x = parseFloat(document.getElementById('powX').value);
+            const n = parseInt(document.getElementById('powN').value);
+            const result = pow(x, n);
+            document.getElementById('powResult').innerText = `Результат: ${result}`;
+        }
+
+        function calculateGCD() {
+            const a = parseInt(document.getElementById('gcdA').value);
+            const b = parseInt(document.getElementById('gcdB').value);
+            const result = gcd(a, b);
+            document.getElementById('gcdResult').innerText = `Результат: ${result}`;
+        }
+
+        function calculateMinDigit() {
+            const x = parseInt(document.getElementById('minDigitX').value);
+            const result = minDigit(x);
+            document.getElementById('minDigitResult').innerText = `Результат: ${result}`;
+        }
+
+        function calculatePluralize() {
+            const n = parseInt(document.getElementById('pluralizeN').value);
+            const result = pluralizeRecords(n);
+            document.getElementById('pluralizeResult').innerText = result;
+        }
+
+        function calculateFibonacci() {
+            const n = parseInt(document.getElementById('fibonacciN').value);
+            const result = fibb(n);
+            document.getElementById('fibonacciResult').innerText = `Результат: ${result}`;
+        }
+    </script>
+</body>
+</html>
